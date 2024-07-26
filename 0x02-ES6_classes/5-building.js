@@ -17,7 +17,7 @@ export default class Building {
     this._sqft = value;
   }
 
-  static Validate(subclass) {
+  static evacuationWarningMessage(subclass) {
     if (typeof subclass.prototype.evacuationWarningMessage !== 'function') {
       throw new Error('Class extending Building must override evacuationWarningMessage');
     }
