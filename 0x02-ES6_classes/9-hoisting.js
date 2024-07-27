@@ -13,9 +13,8 @@ export class HolbertonClass {
   }
 }
 
-export class StudentHolberton extends HolbertonClass {
+export class StudentHolberton {
   constructor(firstName, lastName, holbertonClass) {
-    super(holbertonClass.year, holbertonClass.location);
     this._firstName = firstName;
     this._lastName = lastName;
     this._holbertonClass = holbertonClass;
@@ -26,15 +25,11 @@ export class StudentHolberton extends HolbertonClass {
   }
 
   get holbertonClass() {
-    return {
-      year: this._year,
-      location: this._location,
-    };
+    return this._holbertonClass;
   }
 
   get fullStudentDescription() {
-    const { holbertonClass } = this;
-    return `${this._firstName} ${this._lastName} - ${holbertonClass.year} - ${holbertonClass.location}`;
+    return `${this._firstName} ${this._lastName} - ${this.holbertonClass.year} - ${this.holbertonClass.location}`;
   }
 }
 
