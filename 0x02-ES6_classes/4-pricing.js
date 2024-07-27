@@ -17,7 +17,7 @@ export default class Pricing {
   }
 
   set amount(value) {
-    if (typeof value !== ) {
+    if (typeof value !== 'number') {
       throw new TypeError('Amount must be a number');
     }
     this._amount = value;
