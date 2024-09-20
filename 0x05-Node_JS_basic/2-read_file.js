@@ -4,6 +4,9 @@ const readline = require('readline');
 function countStudents(path) {
   try {
     const fileStream = fs.createReadStream(path);
+    fileStream.on('error', () => {
+      throw new Error('Cannot load the database');
+    });
     const file = readline.createInterface({
       input: fileStream,
       output: process.stdout,
@@ -32,9 +35,6 @@ function countStudents(path) {
       console.log(`Number of students: ${totalStudents}`);
       console.log(`Number of students in CS: ${lineNumber1}. List: ${checkList1.join(', ')}`);
       console.log(`Number of students in SWE: ${lineNumber2}. List: ${checkList2.join(', ')}`);
-    });
-    fileStream.on('error', () => {
-      throw new Error('Cannot load the database');
     });
   } catch (error) {
     console.error(error.message);
