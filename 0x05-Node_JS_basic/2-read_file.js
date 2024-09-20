@@ -31,13 +31,13 @@ function countStudents(path) {
       const totalStudents = lineNumber1 + lineNumber2;
       console.log(`Number of students: ${totalStudents}`);
       console.log(`Number of students in CS: ${lineNumber1}. List: ${checkList1.join(', ')}`);
-      console.log(`Number of students in CS: ${lineNumber2}. List: ${checkList2.join(', ')}`);
+      console.log(`Number of students in SWE: ${lineNumber2}. List: ${checkList2.join(', ')}`);
     });
     fileStream.on('error', () => {
-      console.error('Cannot load the database');
+      throw new Error('Cannot load the database');
     });
   } catch (error) {
-    console.error('Cannot load the database');
+    console.error(error.message);
   }
 }
 
