@@ -34,11 +34,13 @@ async function countStudents(path) {
 }
 
 app.get('/', (req, res) => {
+  res.statusCode = 200;
   res.setHeader('Content-Type', 'text/plain');
   res.send('Hello Holberton School!');
 });
 
 app.get('/students', async (req, res) => {
+  res.statusCode = 200;
   res.setHeader('Content-Type', 'text/plain');
   const database = process.argv[2];
 
