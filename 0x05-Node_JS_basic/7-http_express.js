@@ -1,6 +1,7 @@
 const fs = require('fs').promises;
 const express = require('express');
-const app = express()
+
+const app = express();
 
 async function countStudents(path) {
   try {
@@ -23,10 +24,10 @@ async function countStudents(path) {
         secondList.push(firstname);
       }
     });
-    let result = `Number of students: ${checkLine.length}\n`
-    result += `Number of students in CS: ${firstList.length}. List: ${firstList.join(', ')}\n`
-    result += `Number of students in SWE: ${secondList.length}. List: ${secondList.join(', ')}\n`
-    return result
+    let result = `Number of students: ${checkLine.length}\n`;
+    result += `Number of students in CS: ${firstList.length}. List: ${firstList.join(', ')}\n`;
+    result += `Number of students in SWE: ${secondList.length}. List: ${secondList.join(', ')}`;
+    return result;
   } catch (error) {
     throw new Error('Cannot load the database');
   }
@@ -37,7 +38,7 @@ app.get('/', (req, res) => {
   res.send('Hello Holberton School!');
 });
 
-app.get('/students', async (req, res)=> {
+app.get('/students', async (req, res) => {
   res.setHeader('Content-Type', 'text/plain');
   const database = process.argv[2];
 
@@ -46,7 +47,7 @@ app.get('/students', async (req, res)=> {
     res.end(`This is the list of our students\n${info}`);
   } catch (error) {
     res.end('This is the list of our students');
-  };
+  }
 });
 
 app.listen(1245, () => {
