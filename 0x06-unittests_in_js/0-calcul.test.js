@@ -22,4 +22,8 @@ describe('calNum', () => {
     assert.strictEqual(calNum(1, 3.7), 5);
   });
 
+  it('rounding down a and b floating point fractional numbers with trailing 9s', () => {
+    assert.strictEqual(calNum(2.499999, 3.499999), 5);
+
+  });
 });
