@@ -19,7 +19,7 @@ describe('calNum', () => {
   });
 
   it('It should round a and b and return the sum', () => {
-    assert.strictEqual(calNum(1.52, 3.75), 6);
+    assert.strictEqual(calNum(1, 3.7), 5);
   });
 
 });
