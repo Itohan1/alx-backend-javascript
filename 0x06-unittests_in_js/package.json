@@ -2,7 +2,7 @@
   "name": "calculate-number",
   "version": "1.0.0",
   "description": "",
-  "main": "0-calcul.js",
+  "main": "1-calcul.js",
   "scripts": {
     "test": "mocha"
   },
