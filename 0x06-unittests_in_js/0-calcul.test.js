@@ -1,5 +1,5 @@
 const assert = require('assert');
-const calNum = require('../0-calcul');
+const calNum = require('./0-calcul');
 
 describe('calNum', () => {
   it('It should round a and b and return the sum', () => {
