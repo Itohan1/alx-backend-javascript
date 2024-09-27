@@ -2,7 +2,8 @@
   "name": "calculate-number",
   "version": "1.0.0",
   "description": "",
-  "main": "2-calcul.js",
+  "main": "2-calcul_chai.js",
+  "type": "module",
   "scripts": {
     "test": "mocha"
   },
