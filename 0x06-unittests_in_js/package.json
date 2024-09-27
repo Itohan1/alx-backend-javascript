@@ -2,11 +2,12 @@
   "name": "calculate-number",
   "version": "1.0.0",
   "description": "",
-  "main": "1-calcul.js",
+  "main": "2-calcul.js",
   "scripts": {
     "test": "mocha"
   },
   "devDependencies": {
+    "chai": "^5.1.1",
     "mocha": "^10.0.0"
   },
   "author": "",
